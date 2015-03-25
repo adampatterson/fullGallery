@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/full-gallery.css">
+    <link rel="stylesheet" href="static/css/demo.css">
+</head>
+<body>
+
+    <!--<div class="test" style="height: 50%; display: block; position: relative">-->
+        <div class="gallery"></div>
+    <!--</div>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="static/js/fullGallery.min.js"></script>
+
+    <script>
+        (function ( $ ) {
+            // Images to show
+            var images = [
+                'static/img/bed.jpg',
+                'static/img/book.jpg',
+                'static/img/cat.jpg',
+                'static/img/cups.jpg',
+                'static/img/roast.jpg',
+                'static/img/rosemary.jpg',
+                'static/img/water.jpg'
+            ];
+
+            // Set the gallery up on an element
+            $( ".gallery" ).fullGallery(images, {
+                fade: 300,
+                duration: 4000,
+                controlls: true,
+                autoPlay: true
+            });
+        }( jQuery ));
+    </script>
+</body>
+</html>

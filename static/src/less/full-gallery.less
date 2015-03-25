@@ -1,0 +1,39 @@
+#full-gallery .slideshow .slide
+{
+  height: 100%;
+  width: 100%;
+}
+
+#full-gallery {
+  height: 100%;
+  overflow: hidden;
+  .overlay-controls {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 998;
+  }
+
+  .left-control {
+    left: 0;
+    width: 50%;
+    cursor: w-resize;
+  }
+
+  .right-control {
+    left: 50%;
+    width: 50%;
+    cursor: e-resize;
+  }
+
+  .slide {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+
+    &.active {
+      z-index: 200;
+      opacity: 1;
+    }
+  }
+}
